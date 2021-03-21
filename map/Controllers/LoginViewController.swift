@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         emailTextField.layer.cornerRadius = emailTextField.frame.height/2
         emailTextField.layer.borderWidth = 2
         emailTextField.layer.borderColor = UIColor.gray.cgColor
@@ -33,16 +33,18 @@ class LoginViewController: UIViewController {
         if let email = emailTextField.text, let password = passwordTextField.text {
             Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
                 if let e = error {
-                    print(e)
+                    let alert = UIAlertController(title: "Error", message: e.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel, handler: nil))
+                    self?.present(alert, animated: true)
                 }
                 else {
                     self?.performSegue(withIdentifier: "LogIn", sender: self)
                 }
-             
+                
             }
         }
         
     }
     
-
+    
 }

@@ -207,6 +207,9 @@
                                 <rect key="frame" x="30" y="577" width="315" height="60"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <state key="normal" title="Reset password"/>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="IXD-Gp-MKq" eventType="touchUpInside" id="Koh-vJ-8fw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="A8x-tz-bgH"/>
@@ -223,6 +226,7 @@
                     <navigationItem key="navigationItem" id="AXB-DZ-hag"/>
                     <connections>
                         <outlet property="emailTextField" destination="zdK-nQ-8Nl" id="aUt-Bb-gch"/>
+                        <outlet property="resetButton" destination="nsS-A0-szn" id="yoy-Ag-a41"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUa-N8-GfW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
