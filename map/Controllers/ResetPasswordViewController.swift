@@ -8,7 +8,8 @@
 import UIKit
 
 class ResetPasswordViewController: UIViewController {
-
+    @IBOutlet weak var emailTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

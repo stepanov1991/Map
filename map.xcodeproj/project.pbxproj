@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,7 @@
 		CE55AC162607D58200CAF56D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55AC152607D58200CAF56D /* LoginViewController.swift */; };
 		CE55AC192607D59A00CAF56D /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55AC182607D59A00CAF56D /* ResetPasswordViewController.swift */; };
 		CE55AC1C2607D5AA00CAF56D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE55AC1B2607D5A900CAF56D /* MapViewController.swift */; };
-		CE55AC202607D81700CAF56D /* GoogleService-Info .plist in Resources */ = {isa = PBXBuildFile; fileRef = CE55AC1F2607D81600CAF56D /* GoogleService-Info .plist */; };
+		CE55AC372607E16300CAF56D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE55AC362607E16300CAF56D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +37,7 @@
 		CE55AC152607D58200CAF56D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE55AC182607D59A00CAF56D /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		CE55AC1B2607D5A900CAF56D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		CE55AC1F2607D81600CAF56D /* GoogleService-Info .plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info .plist"; sourceTree = "<group>"; };
+		CE55AC362607E16300CAF56D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,6 @@
 				ABC4631E3CEC48B1F102C977 /* Pods-map.debug.xcconfig */,
 				54C00009DB0D900BEAD3BBB4 /* Pods-map.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -90,7 +89,7 @@
 				CE55AC032607D1B900CAF56D /* Assets.xcassets */,
 				CE55AC052607D1BA00CAF56D /* LaunchScreen.storyboard */,
 				CE55AC082607D1BA00CAF56D /* Info.plist */,
-				CE55AC1F2607D81600CAF56D /* GoogleService-Info .plist */,
+				CE55AC362607E16300CAF56D /* GoogleService-Info.plist */,
 			);
 			path = map;
 			sourceTree = "<group>";
@@ -184,8 +183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE55AC072607D1BA00CAF56D /* LaunchScreen.storyboard in Resources */,
+				CE55AC372607E16300CAF56D /* GoogleService-Info.plist in Resources */,
 				CE55AC042607D1B900CAF56D /* Assets.xcassets in Resources */,
-				CE55AC202607D81700CAF56D /* GoogleService-Info .plist in Resources */,
 				CE55AC022607D1B700CAF56D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -99,7 +99,7 @@
                                         <rect key="frame" x="0.0" y="54" width="315" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="1657" y="463"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="OH3-nq-jfV">
             <objects>
-                <viewController id="t7R-hZ-Olp" sceneMemberID="viewController">
+                <viewController id="t7R-hZ-Olp" customClass="LoginViewController" customModule="map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsA-rj-8jL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,6 +137,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="t7R-hZ-Olp" eventType="touchUpInside" id="0uv-HP-mTZ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qX0-qs-bPA">
                                 <rect key="frame" x="30" y="144" width="315" height="88"/>
@@ -150,38 +153,53 @@
                                         <rect key="frame" x="0.0" y="54" width="315" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGA-aX-Mtb">
+                                <rect key="frame" x="251" y="252" width="94" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Forgot password?">
+                                    <color key="titleColor" systemColor="systemGrayColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IXD-Gp-MKq" kind="show" id="qla-uC-2Sr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dck-fp-8i0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zGA-aX-Mtb" firstAttribute="top" secondItem="qX0-qs-bPA" secondAttribute="bottom" constant="20" id="gti-Bz-ph3"/>
                             <constraint firstItem="qX0-qs-bPA" firstAttribute="top" secondItem="dck-fp-8i0" secondAttribute="top" constant="100" id="hWd-j7-tL8"/>
                             <constraint firstItem="dck-fp-8i0" firstAttribute="trailing" secondItem="qX0-qs-bPA" secondAttribute="trailing" constant="30" id="iOx-B3-haL"/>
+                            <constraint firstItem="dck-fp-8i0" firstAttribute="trailing" secondItem="zGA-aX-Mtb" secondAttribute="trailing" constant="30" id="idU-Cc-Lgc"/>
                             <constraint firstItem="qX0-qs-bPA" firstAttribute="leading" secondItem="dck-fp-8i0" secondAttribute="leading" constant="30" id="job-EX-jw9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2R0-lA-fwY"/>
                     <connections>
-                        <segue destination="hUA-t9-PHf" kind="show" identifier="Login" id="GMI-Kz-PWs"/>
+                        <outlet property="emailTextField" destination="8CU-LJ-PXS" id="joa-C5-a66"/>
+                        <outlet property="loginButton" destination="Rsx-Oi-nTd" id="lj2-EQ-Xh4"/>
+                        <outlet property="passwordTextField" destination="nhE-Y1-0Cg" id="Po2-PM-5yI"/>
+                        <segue destination="hUA-t9-PHf" kind="show" identifier="LogIn" id="GMI-Kz-PWs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K89-Eb-p89" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1656.8" y="-254.12293853073464"/>
         </scene>
-        <!--View Controller-->
+        <!--Reset Password View Controller-->
         <scene sceneID="VeZ-XD-sAt">
             <objects>
-                <viewController id="IXD-Gp-MKq" sceneMemberID="viewController">
+                <viewController id="IXD-Gp-MKq" customClass="ResetPasswordViewController" customModule="map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CGI-pS-qqQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email adress" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdK-nQ-8Nl">
-                                <rect key="frame" x="30" y="100" width="315" height="34"/>
+                                <rect key="frame" x="30" y="144" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -202,6 +220,10 @@
                             <constraint firstItem="A8x-tz-bgH" firstAttribute="bottom" secondItem="nsS-A0-szn" secondAttribute="bottom" constant="30" id="x0W-wf-RWA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="AXB-DZ-hag"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="zdK-nQ-8Nl" id="aUt-Bb-gch"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUa-N8-GfW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -243,7 +265,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="q1R-O5-aci"/>
+        <segue reference="GMI-Kz-PWs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
@@ -251,6 +273,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

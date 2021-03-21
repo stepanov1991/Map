@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisteViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
@@ -15,11 +16,34 @@ class RegisteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.layer.cornerRadius = emailTextField.frame.height/2
+        emailTextField.layer.borderWidth = 2
+        emailTextField.layer.borderColor = UIColor.gray.cgColor
+        
+        passwordTextField.layer.cornerRadius = emailTextField.frame.height/2
+        passwordTextField.layer.borderWidth = 2
+        passwordTextField.layer.borderColor = UIColor.gray.cgColor
+        
+        registerButton.layer.cornerRadius = 25
+        registerButton.layer.borderWidth = 2
+        registerButton.layer.borderColor = UIColor.systemIndigo.cgColor
 
      
     }
     
     @IBAction func registerButtonPressed(_ sender: UIButton) {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    print(e)
+                    
+                }
+                else{
+                    self.performSegue(withIdentifier: "Register", sender: self)
+                }
+            }
+        }
     }
     
 
