@@ -75,9 +75,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOO-wq-eNj">
-                                <rect key="frame" x="30" y="568" width="315" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOO-wq-eNj">
+                                <rect key="frame" x="30" y="577" width="315" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                 <state key="normal" title="Register">
@@ -108,8 +107,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zQB-Vz-IfL" firstAttribute="top" secondItem="SQd-k2-keJ" secondAttribute="top" constant="100" id="C8r-cI-jwG"/>
+                            <constraint firstItem="IOO-wq-eNj" firstAttribute="leading" secondItem="SQd-k2-keJ" secondAttribute="leading" constant="30" id="NeB-CK-aBd"/>
                             <constraint firstItem="SQd-k2-keJ" firstAttribute="trailing" secondItem="zQB-Vz-IfL" secondAttribute="trailing" constant="30" id="Rzl-s0-nrI"/>
                             <constraint firstItem="zQB-Vz-IfL" firstAttribute="leading" secondItem="SQd-k2-keJ" secondAttribute="leading" constant="30" id="d1L-g8-oTV"/>
+                            <constraint firstItem="SQd-k2-keJ" firstAttribute="bottom" secondItem="IOO-wq-eNj" secondAttribute="bottom" constant="30" id="jRs-Jr-Qcg"/>
+                            <constraint firstItem="SQd-k2-keJ" firstAttribute="trailing" secondItem="IOO-wq-eNj" secondAttribute="trailing" constant="30" id="xXD-BV-uqU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jLt-ig-Smf"/>
@@ -132,15 +134,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsx-Oi-nTd">
-                                <rect key="frame" x="30" y="560" width="315" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
-                                <state key="normal" title="Log In"/>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="t7R-hZ-Olp" eventType="touchUpInside" id="0uv-HP-mTZ"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qX0-qs-bPA">
                                 <rect key="frame" x="30" y="144" width="315" height="88"/>
                                 <subviews>
@@ -167,10 +160,21 @@
                                     <segue destination="IXD-Gp-MKq" kind="show" id="qla-uC-2Sr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsx-Oi-nTd">
+                                <rect key="frame" x="30" y="577" width="315" height="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="t7R-hZ-Olp" eventType="touchUpInside" id="0uv-HP-mTZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dck-fp-8i0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="dck-fp-8i0" firstAttribute="trailing" secondItem="Rsx-Oi-nTd" secondAttribute="trailing" constant="30" id="1BH-td-kWq"/>
+                            <constraint firstItem="Rsx-Oi-nTd" firstAttribute="leading" secondItem="dck-fp-8i0" secondAttribute="leading" constant="30" id="esy-Ye-AYH"/>
+                            <constraint firstItem="dck-fp-8i0" firstAttribute="bottom" secondItem="Rsx-Oi-nTd" secondAttribute="bottom" constant="30" id="fww-8H-evY"/>
                             <constraint firstItem="zGA-aX-Mtb" firstAttribute="top" secondItem="qX0-qs-bPA" secondAttribute="bottom" constant="20" id="gti-Bz-ph3"/>
                             <constraint firstItem="qX0-qs-bPA" firstAttribute="top" secondItem="dck-fp-8i0" secondAttribute="top" constant="100" id="hWd-j7-tL8"/>
                             <constraint firstItem="dck-fp-8i0" firstAttribute="trailing" secondItem="qX0-qs-bPA" secondAttribute="trailing" constant="30" id="iOx-B3-haL"/>
@@ -269,7 +273,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GMI-Kz-PWs"/>
+        <segue reference="q1R-O5-aci"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
